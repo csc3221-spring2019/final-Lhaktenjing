@@ -12,7 +12,7 @@ var db         = require('./db');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var port = 3007;        // set our port
+var port = 3034;        // set our port
 
 db.connect(function ConnectionHandler(err){
     if (err){
