@@ -1,7 +1,6 @@
 var express = require('express');       // imports the express library
 var router = express.Router();          // Router object for routes
 
-var categoriesModel = require('../models/categories');
 var filmsModel = require('../models/films');
 
 router.get('/api', function HomePageHandler(request, response) {
@@ -10,7 +9,7 @@ router.get('/api', function HomePageHandler(request, response) {
 });
 
 router.get('/films', function FilmsGetHandler(request, response){
-	filmsModel.getAll(function DoneGettingAll(err, results, fields){
+	filmsModel.getAll(function DoneGettingAll(err, result, fields){
 		if (err) {
             console.log("Some error selecting all");
             console.log(err);
